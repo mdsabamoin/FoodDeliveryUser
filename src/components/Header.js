@@ -19,7 +19,7 @@ const Header = () => {
   }
 
 
-  localStorage.setItem("cartitems",cartItems.length);
+  
   const cartItemlength = localStorage.getItem("cartitems");
   // if(!cartItemlength){
   //   cartItemlength=0;

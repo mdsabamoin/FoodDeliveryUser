@@ -125,6 +125,7 @@ const cartSlice = createSlice({
       })
       .addCase(addToCartAsync.fulfilled, (state, action) => {
         state.items = [...state.items, action.payload];  // Simply update the state
+        localStorage.setItem("cartitems",state.items.length)
       })
 
       .addCase(addToCartAsync.rejected, (state, action) => {

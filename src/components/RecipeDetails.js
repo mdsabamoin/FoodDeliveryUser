@@ -28,11 +28,12 @@ const RecipeDetails = () => {
 
 
     const handleAddToCart = (recipe) => {
-      localStorage.setItem("cartitems",cartItems.length); 
+       
       const isItemInCart = cartItems.some((cartItem) => cartItem.recipeName === recipe.recipeName); // Fixed property name
     
       if (!isItemInCart) {
         dispatch(addToCartAsync({ recipe: { ...recipe, quantity: 1 } })); 
+        // localStorage.setItem("cartitems",cartItems.length);
       } 
     };
     

@@ -16,7 +16,8 @@ const Cart = () => {
   },[dispatch])
 
   const handleRemove = (item) => {
-    localStorage.setItem("cartitems",cartItems.length)
+   const noofitemsincart = localStorage.getItem("cartitems");
+    localStorage.setItem("cartitems",noofitemsincart-1);
     dispatch(removeFromCartAsync({item}));
   };
 

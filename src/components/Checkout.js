@@ -54,9 +54,9 @@ const Checkout = () => {
   }, [orderPlaced, dispatch]);
 
   // Update localStorage only when cart changes
-  useEffect(() => {
-    localStorage.setItem("cartitems", cartItems.length);
-  }, [cartItems.length]);
+  // useEffect(() => {
+  //   localStorage.setItem("cartitems", cartItems.length);
+  // }, [cartItems.length]);
 
   return (
     <Container className="mt-4">
